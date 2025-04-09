@@ -172,7 +172,7 @@ for idx, movie in enumerate(movies[:8]):  # Show top 8 movies
         poster_path = movie.get("poster_path")
         if poster_path:
             poster_url = f"{POSTER_BASE_URL}{poster_path}"
-            st.image(poster_url, use_column_width=True)
+            st.image(poster_url, use_container_width=True)
         
         st.markdown(f"**{movie['title']}**")
         st.write(f"⭐ {movie['vote_average']:.1f}")
@@ -186,7 +186,7 @@ for idx, movie in enumerate(movies[:8]):  # Show top 8 movies
                 with rec_cols[rec_idx]:
                     rec_poster = rec.get("poster_path")
                     if rec_poster:
-                        st.image(f"{POSTER_BASE_URL}{rec_poster}", use_column_width=True)
+                        st.image(f"{POSTER_BASE_URL}{rec_poster}", use_container_width=True)
                     st.markdown(f"**{rec['title']}**")
                     st.write(f"⭐ {rec['vote_average']:.1f}")
 
